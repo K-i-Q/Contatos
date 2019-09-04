@@ -3,7 +3,9 @@ package com.example.contatos.Model;
 public class Contato {
     private Integer id;
     private String nome;
-    private String titulo;
+    private String numero;
+    private String tipo;
+
 
     public Integer getId() {
         return id;
@@ -21,11 +23,19 @@ public class Contato {
         this.nome = nome;
     }
 
-    public String getTitulo() {
-        return titulo;
+    public String getNumero() {
+        return numero;
     }
 
-    public void setTitulo(String titulo) {
-        this.titulo = titulo;
+    public void setNumero(String numero) {
+        this.numero = numero;
+    }
+
+    public String getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
     }
 }
