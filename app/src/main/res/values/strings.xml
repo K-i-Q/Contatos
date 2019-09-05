@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Contatos</string>
+
+        <string-array name="types_phone">
+            <item>Celular</item>
+            <item>Fixo</item>
+        </string-array>
 </resources>

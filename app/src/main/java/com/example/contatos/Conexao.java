@@ -14,7 +14,7 @@ public class Conexao extends SQLiteOpenHelper {
 
     public Conexao(Context context, String nome, SQLiteDatabase.CursorFactory factory, int version){
         super(context, nome, factory, version);
-
+        conn = getWritableDatabase();
     }
 
     @Override
