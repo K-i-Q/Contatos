@@ -38,4 +38,21 @@ public class Contato {
     public void setTipo(String tipo) {
         this.tipo = tipo;
     }
+
+    @Override
+    public String toString() {
+
+        StringBuilder sb = new StringBuilder();
+
+        sb.append("Nome: ");
+        sb.append(nome);
+        sb.append("\n");
+        sb.append("Telefone: ");
+        sb.append(numero);
+        sb.append("\n");
+        sb.append("Tipo: ");
+        sb.append(tipo);
+
+        return sb.toString();
+    }
 }
