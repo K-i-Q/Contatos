@@ -5,6 +5,10 @@ public class Contato {
     private String nome;
     private String numero;
     private String tipo;
+    private String apelido;
+    private String genero;
+    private String email;
+
 
 
     public Integer getId() {
@@ -39,6 +43,22 @@ public class Contato {
         this.tipo = tipo;
     }
 
+    public String getApelido() {
+        return apelido;
+    }
+
+    public void setApelido(String apelido) {
+        this.apelido = apelido;
+    }
+
+    public String getGenero() { return genero; }
+
+    public void setGenero(String genero) { this.genero= genero; }
+
+    public String getEmail() { return email; }
+
+    public void setEmail(String email) { this.email= email; }
+
     @Override
     public String toString() {
 
@@ -52,6 +72,12 @@ public class Contato {
         sb.append("\n");
         sb.append("Tipo: ");
         sb.append(tipo);
+        sb.append("\n");
+        sb.append("Genero: ");
+        sb.append(genero);
+        sb.append("\n");
+        sb.append("Apelido: ");
+        sb.append(apelido);
 
         return sb.toString();
     }

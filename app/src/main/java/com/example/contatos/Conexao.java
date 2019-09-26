@@ -23,7 +23,10 @@ public class Conexao extends SQLiteOpenHelper {
                 "ID INTEGER PRIMARY KEY AUTOINCREMENT," +
                 "NOME VARCHAR(80) NOT NULL," +
                 "NUMERO VARCHAR(20),"+
-                "tipo VARCHAR(50));"
+                 "EMAIL VARCHAR(20),"+
+                 "APELIDO VARCHAR(20),"+
+                 "GENERO VARCHAR(20),"+
+                "TIPO VARCHAR(50));"
                 );
     }
 

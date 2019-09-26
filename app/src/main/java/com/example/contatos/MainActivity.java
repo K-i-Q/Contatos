@@ -27,16 +27,31 @@ public class MainActivity extends AppCompatActivity {
         EditText txtNome = findViewById(R.id.txtNome);
         EditText txtNumero = findViewById(R.id.txtNumero);
         Spinner txtTipo = findViewById(R.id.txtTipo);
+        EditText txtApelido = findViewById(R.id.txtApelido);
+        EditText txtGenero = findViewById(R.id.txtGenero);
+
+
 
         Contato contato = new Contato();
 
         contato.setNome(txtNome.getText().toString());
         contato.setNumero(txtNumero.getText().toString());
-        contato.setTipo(txtTipo.getAdapter().toString());
+        contato.setTipo(txtTipo.getSelectedItem().toString());
+        contato.setApelido(txtApelido.getText().toString());
+        contato.setGenero(txtGenero.getText().toString());
 
-        new ContatoDAO().salvar(contato);
 
-        Toast.makeText(getApplicationContext(),"Contato "+txtNome.getText().toString()+" salvo",Toast.LENGTH_LONG).show();
+
+        if(new ContatoDAO().contatoExiste(contato)){
+            new ContatoDAO().salvar(contato);
+            Toast.makeText(getApplicationContext(),"Contato "+txtNome.getText().toString()+" salvo",Toast.LENGTH_LONG).show();
+        }else {
+            Toast.makeText(getApplicationContext(),"Contato "+txtNome.getText().toString()+" já existe",Toast.LENGTH_LONG).show();
+
+        }
+
+
+
 
         limpar(view);
     }
@@ -45,9 +60,15 @@ public class MainActivity extends AppCompatActivity {
         EditText txtNome = findViewById(R.id.txtNome);
         EditText txtNumero = findViewById(R.id.txtNumero);
         EditText txtEmail = findViewById(R.id.txtEmail);
+        EditText txtApelido = findViewById(R.id.txtApelido);
+        EditText txtGenero = findViewById(R.id.txtGenero);
+
 
         txtNome.setText("");
         txtNumero.setText("");
         txtEmail.setText("");
+        txtApelido.setText("");
+        txtGenero.setText("");
+
     }
 }

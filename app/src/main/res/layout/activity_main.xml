@@ -12,21 +12,21 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="200dp" />
+        app:layout_constraintGuide_begin="131dp" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/gBotNome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="298dp" />
+        app:layout_constraintGuide_begin="216dp" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/gBotTipo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="373dp" />
+        app:layout_constraintGuide_begin="274dp" />
 
     <Button
         android:id="@+id/idSalvar"
@@ -34,11 +34,10 @@
         android:layout_height="0dp"
         android:onClick="salvar"
         android:text="Salvar"
-        app:layout_constraintBottom_toTopOf="@+id/gBotButton"
+        app:layout_constraintBottom_toTopOf="@+id/gBotScreen"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.262"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/gBotEmail" />
+        app:layout_constraintTop_toTopOf="@+id/gBotScreen2" />
 
     <EditText
         android:id="@+id/txtNome"
@@ -58,14 +57,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="468dp" />
+        app:layout_constraintGuide_begin="375dp" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/gBotButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="542dp" />
+        app:layout_constraintGuide_begin="453dp" />
 
     <EditText
         android:id="@+id/txtNumero"
@@ -81,6 +80,32 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/gTopScreen"
         app:layout_constraintVertical_bias="1.0" />
+
+    <EditText
+        android:id="@+id/txtGenero"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Genero"
+        android:inputType="phone"
+        app:layout_constraintBottom_toTopOf="@+id/gBotButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/gBotEmail" />
+
+    <EditText
+        android:id="@+id/txtApelido"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Apelido"
+        android:inputType="phone"
+        app:layout_constraintBottom_toTopOf="@+id/gBotScreen2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/gBotButton" />
 
     <EditText
         android:id="@+id/txtEmail"
@@ -110,7 +135,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="97dp" />
+        app:layout_constraintGuide_begin="52dp" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/gBotScreen"
@@ -118,6 +143,13 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_begin="609dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gBotScreen2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="541dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
