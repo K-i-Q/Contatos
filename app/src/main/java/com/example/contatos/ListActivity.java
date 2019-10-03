@@ -1,26 +1,27 @@
 package com.example.contatos;
 
 import android.content.Intent;
-import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 
-import com.example.contatos.Model.Contato;
-import com.example.contatos.Model.ContatoDAO;
+import com.example.contatos.model.Conexao;
+import com.example.contatos.model.Contato;
+import com.example.contatos.model.ContatoDAO;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.View;
-import android.widget.ArrayAdapter;
-import android.widget.Button;
-import android.widget.ListView;
 
 import java.util.List;
 
 public class ListActivity extends AppCompatActivity {
+
+    private RecyclerView recyclerView;
+    private RecyclerView.Adapter mAdapter;
+    private RecyclerView.LayoutManager layoutManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,12 +45,21 @@ public class ListActivity extends AppCompatActivity {
 
         List<Contato> contatos = new ContatoDAO().listar();
 
-        ListView listaContatos = findViewById(R.id.listContatos);
+        recyclerView = (RecyclerView) findViewById(R.id.my_recycler_view);
 
-        ArrayAdapter<Contato> arrayContatos = new ArrayAdapter<>(getApplicationContext(), android.R.layout.simple_list_item_1);
-        arrayContatos.addAll(contatos);
+        // use this setting to improve performance if you know that changes
+        // in content do not change the layout size of the RecyclerView
+        recyclerView.setHasFixedSize(true);
 
-        listaContatos.setAdapter(arrayContatos);
+        // use a linear layout manager
+        layoutManager = new LinearLayoutManager(this);
+        recyclerView.setLayoutManager(layoutManager);
+
+        // specify an adapter (see also next example)
+        mAdapter = new MyAdapter(contatos);
+        recyclerView.setAdapter(mAdapter);
+
+
 
 
     }

@@ -1,19 +1,11 @@
-package com.example.contatos.Model;
+package com.example.contatos.model;
 
 import android.content.ContentValues;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-
-import com.example.contatos.Conexao;
-
 import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Iterator;
 import java.util.List;
-import java.util.ListIterator;
 
 public class ContatoDAO {
     public void salvar(Contato contato){

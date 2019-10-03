@@ -2,16 +2,15 @@ package com.example.contatos;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-import com.example.contatos.Model.Contato;
-import com.example.contatos.Model.ContatoDAO;
-import com.google.android.material.snackbar.Snackbar;
+import com.example.contatos.model.Conexao;
+import com.example.contatos.model.Contato;
+import com.example.contatos.model.ContatoDAO;
 
 public class MainActivity extends AppCompatActivity {
 

@@ -1,4 +1,4 @@
-package com.example.contatos;
+package com.example.contatos.model;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;

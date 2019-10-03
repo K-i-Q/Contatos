@@ -1,4 +1,4 @@
-package com.example.contatos.Model;
+package com.example.contatos.model;
 
 public class Contato {
     private Integer id;
